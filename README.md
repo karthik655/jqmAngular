@@ -7,30 +7,30 @@ working in the way that i've expected.
 As this is in POC stage we still need to work around on this project
 
 
-Directory structure of the project:
------------------------------------
-:
-:--public-
-:         |-css
-:         |-js-
-:             |-app.js
-:             |-main.js
-:             |-app
-:                 |-Controllers
-:                 |-Directives
-:                 |-Router
-:                 |-Services  
-:                 |-Views
-:             |-lib
-:                 |-angular
-:                 |-jquery
-:                 |-utils
-:                 |-require.js
-:                 |-text.js
-:--index.html
-:
+Directory structure:
+-------------------
+:<br>
+:--public-<br>
+:---------|-css<br>
+:---------|-js-<br>
+:-------------|-app.js<br>
+:-------------|-main.js<br>
+:-------------|-app<br>
+:-----------------|-Controllers<br>
+:-----------------|-Directives<br>
+:-----------------|-Router<br>
+:-----------------|-Services<br>
+:-----------------|-Views<br>
+:-------------|-lib<br>
+:-----------------|-angular<br>
+:-----------------|-jquery<br>
+:-----------------|-utils<br>
+:-----------------|-require.js<br>
+:-----------------|-text.js<br>
+:--index.html<br>
+:<br>
 
-Used libraries:
+Used-libraries:
 ---------------
 
 anglar.js
@@ -39,6 +39,8 @@ underscore.js
 require.js
 
 
+Getting-Started:
+---------------
 
 App.js contains the application initialization logic.
 We are not using angular js routing mechanism and writted a custom routing module.
