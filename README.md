@@ -33,10 +33,10 @@ Directory structure:
 Used-libraries:
 ---------------
 
-anglar.js
-jqueryMobile
-underscore.js
-require.js
+anglar.js<br>
+jqueryMobile<br>
+underscore.js<br>
+require.js<br>
 
 
 Getting-Started:
