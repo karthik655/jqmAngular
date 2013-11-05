@@ -34,13 +34,20 @@ define([
                     $scope: scope || this.scope
                 });
                 
-                if(toPage.initialize)
+                if(toPage && toPage.initialize) {
                     toPage.initialize(this.scope);
-                else
+                } else {
                     alert("Unable to initialize "+route+"Ctrl controller");
+                    return false;
+                }
                 
                 $("body").prepend(this.fromPage ? this.fromPage.$el : $("div[data-role=page]"), toPage.$el);
                 $.mobile.changePage(toPage.$el, {
+//                    pageContainer: $("div[data-role=page]"), 
+//                    transition: "slideup",
+//                    reverse: false,
+//                    changeHash : false,
+//                    allowSamePageTransition : true
                     changeHash : true,
                     customRoute: true
                 });
