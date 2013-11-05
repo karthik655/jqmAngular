@@ -13,7 +13,7 @@ define(
                     this.$el.find("div[data-role=header]").append($compile(headerTemplateHTML)($scope));
                     this.$el.find("div[data-role=content]").append($compile(todoTmpl)($scope));
                     this.$el.find("div[data-role=footer]").append($compile(footerTemplateHTML)($scope));
-                    $scope.footer = '$scope test from controller!!!';
+                    $scope.footer = 'scope test from Home controller!!!';
                     try {
                         $scope.$apply();
                     } catch(e) {
