@@ -27,10 +27,8 @@ define([
                     alert("No Route Definition Found!!");
                     return false;
                 }
-                //                $("#appFooter").html("");
                 if(this.fromPage) {
                     this.fromPage.dispose();
-                //                    this.fromPage.$el.remove();
                 }
                 var toPage = this.controllerObj(this.routes[route], {
                     $scope: scope || this.scope
@@ -51,11 +49,9 @@ define([
                 $("div[data-role=content]").css("padding-top", $("div[data-role=header]").height());
                 $("div[data-role=content]").css("padding-bottom", $("div[data-role=footer]").height());
                 this.fromPage = toPage;
-                console.log($.mobile.activePage);
             },
             
             this.beforePageChangeHandler = function(e, data) {
-                console.log(data);
                 if(data.options.customRoute) {
                     e.preventDefault();
                 }
