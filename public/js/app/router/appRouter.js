@@ -66,7 +66,12 @@ define([
             this.beforePageChangeHandler = function(e, data) {
                 if(data.options.customRoute) {
                     e.preventDefault();
+                    return false;
+                }
+                if(data.toPage) {
+                    var urlObj = data.toPage.split("#");
+                    this.navigate(urlObj[1]);
                 }
             }
         }]);
-    });    
+    });
