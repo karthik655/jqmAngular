@@ -48,6 +48,8 @@ define([
                 }
 //                $("div[data-role=page]").css("display", "block");
                 $("div[data-role=page]").trigger("create").trigger("resize");
+                $("div[data-role=content]").css("padding-top", $("div[data-role=header]").height());
+                $("div[data-role=content]").css("padding-bottom", $("div[data-role=footer]").height());
                 this.fromPage = toPage;
                 console.log($.mobile.activePage);
             },
