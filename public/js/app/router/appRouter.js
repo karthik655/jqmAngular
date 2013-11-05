@@ -33,7 +33,12 @@ define([
                 var toPage = this.controllerObj(this.routes[route], {
                     $scope: scope || this.scope
                 });
-                toPage.initialize(this.scope);
+                
+                if(toPage.initialize)
+                    toPage.initialize(this.scope);
+                else
+                    alert("Unable to initialize "+route+"Ctrl controller");
+                
                 $("body").prepend(this.fromPage ? this.fromPage.$el : $("div[data-role=page]"), toPage.$el);
                 $.mobile.changePage(toPage.$el, {
                     changeHash : true,
