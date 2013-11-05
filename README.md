@@ -58,7 +58,7 @@ this.routes = {
     contact: "ContactCtrl"
 }
 
-In the way when we try to navigate to "home route" then AppRouter loads the "HomeCtrl".
+When we try to navigate to "home route" then AppRouter loads the "HomeCtrl". Check the following method to navigate to a module/route.
 
 
 this.navigate= function(route, scope){
