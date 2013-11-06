@@ -33,25 +33,5 @@ define(
                 }
             };
             return BaseViewCtrl;
-//            
-//          var selectTodo = function() {
-//                var templateHTML = angular.element(todoTmpl);
-//                $controller("TestCtrl", {$scope: $scope});
-//                var clonedTemplate = $compile(templateHTML)($scope, function(clonedElt, $scope) {
-//                    $("div[data-role=content]").append(clonedElt);
-//                    $("div[data-role=content]").trigger("create");
-////                    $.mobile.changePage(clonedElt, {
-////                        pageContainer: $("div[data-role=page]"), 
-////                        transition: "slideup",
-////                        reverse: false,
-////                        changeHash : false,
-////                        allowSamePageTransition : true
-////                    });
-//                });
-//            }
-//            
-//            var test = function() {
-//                alert("working fine");
-//            }
         }]);
     });
