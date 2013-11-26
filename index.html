@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Jqmangular by karthik655</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/karthik655/jqmAngular">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Jqmangular</h1>
+            <h2>A sample project that integrats jquery mobile with angular js.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/karthik655/jqmAngular/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/karthik655/jqmAngular/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a name="jqmangular" class="anchor" href="#jqmangular"><span class="octicon octicon-link"></span></a>jqmAngular</h1>
+
+<p>A sample/POC project, integrated jquery mobile with angular js.
+Integration between jquery moble and angular js. I've tried the angular js and jquery mobile adapter but that is not
+working in the way that i've expected.
+As this is in POC stage we still need to work around on this project</p>
+
+<h2>
+<a name="directory-structure" class="anchor" href="#directory-structure"><span class="octicon octicon-link"></span></a>Directory structure:</h2>
+
+<p>:<br>
+:--public-<br>
+:---------|-css<br>
+:---------|-js-<br>
+:-------------|-app.js<br>
+:-------------|-main.js<br>
+:-------------|-app<br>
+:-----------------|-Controllers<br>
+:-----------------|-Directives<br>
+:-----------------|-Router<br>
+:-----------------|-Services<br>
+:-----------------|-Views<br>
+:-------------|-lib<br>
+:-----------------|-angular<br>
+:-----------------|-jquery<br>
+:-----------------|-utils<br>
+:-----------------|-require.js<br>
+:-----------------|-text.js<br>
+:--index.html<br>
+:<br></p>
+
+<h2>
+<a name="used-libraries" class="anchor" href="#used-libraries"><span class="octicon octicon-link"></span></a>Used-libraries:</h2>
+
+<p>anglar.js<br>
+jqueryMobile<br>
+underscore.js<br>
+require.js<br></p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting-Started:</h2>
+
+<p>App.js contains the application initialization logic.
+We are not using angular js routing mechanism and writted a custom routing module.
+the following code explains, how Main.js initializes the router with a default route of the application</p>
+
+<p>var RouteResolver = $injector.get("RouteResolver");
+RouteResolver.initialize();</p>
+
+<p>This code initializes the router and loads the application default route configured in router.
+As a first step in AppRouter, configure the routes with controllers.</p>
+
+<p>this.routes = {
+    home: "HomeCtrl",
+    contact: "ContactCtrl"
+}</p>
+
+<p>When we try to navigate to "home route" then AppRouter loads the "HomeCtrl". Check the following method to navigate to a module/route.</p>
+
+<p>this.navigate= function(route, scope){
+                ................................................................................
+}</p>
+
+<p>Page navigations will be handled in the Approuter's navigate method. So, call the navigate method to 
+navigate to a specific module.</p>
+
+<p>HTML Anchor tag navigations are also handled in the same but that is still in progress.</p>
+
+<p>As the "AppRouter" initializes a controller by calling the initialize method in a controller, Every controller
+must implement an initialize method.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/karthik655">karthik655</a> can be found on <a href="https://github.com/karthik655/jqmAngular">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
